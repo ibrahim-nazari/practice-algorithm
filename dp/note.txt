@@ -1,0 +1,34 @@
+
+
+topology sorting:
+
+build the graph, and key and list, in_dgree for each node the type is object
+loop through dependency add a to b and in_dgree increment 1 for b
+add all in_dgree which is zero to que
+while que is not empty pop and append to result and update all neighbour in_dgree if it is zero add to que
+
+at the end check if the length of in_dgree and result is equal return result other case not possible
+
+
+dijkstra algorithm:
+
+we have the cities and roads, then we fill dist with float infinity make the start 0 and we build the graph with roads
+add start to que while q not empty pop with heap then cost ,node then loop through all neighbour to update their dist
+then return dist
+
+prim's algorithm
+we have cities and roads we need graph visited set, we build the group looping roads, append a,b and b,a to group with w, 
+we select the first node add to q, and min_cost to zero while len of visited less than cities and q is not empty we popelement
+check if we already visited this city continue other case add to visited add the cost loop through neighbour if not already visited
+add to q, and make visited true, if visited len is cities possibe return min_cost othercase impossible
+
+scrambled word:
+for s1 and s2 we check if they are in memo if they are equal true if they are not equal or  sorted them is not equal return false
+we get len s1 n then start from 1 to n we compare slices s1:i , s2:i,-- s1i: , s2i: and i:, -1: -- i: , :-1 if this condition is true then make
+true, and after for loop finished make false
+
+Word break
+side of dp is n+1 loop start from 1 to n+1 and j loop to ji , dp j is true and substring i:j is in worddict
+dp i get true end dp n return 
+
+
